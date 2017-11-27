@@ -1,0 +1,160 @@
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+html {
+	height: 100%;
+	box-sizing: border-box;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28143c+0,663399+100 */
+	background: #28143c; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #28143c 0%, #663399 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #28143c 0%,#663399 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #28143c 0%,#663399 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28143c', endColorstr='#663399',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+body {
+	margin: 0;
+	transition: background 0.3s;
+	height: 100%;
+	font-family: "Trebuchet", "Arial", sans-serif;
+}
+body.wrong {
+	background: firebrick;
+}
+body.correct {
+	background: green;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.card-holder {
+	height: calc(100vh - 45px);
+    margin: 45px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: calc(50vh - ( 64vw / 2.5 ) ) 10vw;
+}
+.card-holder.extra {
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
+.card-holder > div {
+    background: white;
+    float: left;
+    width: calc( ( 90vw / 5) );
+    height: calc( ( 66vw / 5 ) );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+.card-holder > div.selected {
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(255,204,110,1);
+	-moz-box-shadow: 0px 0px 10px 5px rgba(255,204,110,1);
+	box-shadow: 0px 0px 10px 5px rgba(255,204,110,1);
+}
+.card-holder > div > div {
+	width: 30%;
+    height: 68%;
+    background-size: contain;
+    background-position: center;
+}
+
+.card-holder > div.red > div {
+    filter: hue-rotate(240deg);
+}
+.card-holder > div.purple > div {
+    filter: hue-rotate(134deg);
+}
+.card-holder > div.green > div {
+    filter: hue-rotate(-30deg);
+}
+
+.card-holder > div.diamond > div {
+    background-image: url(img/frame-diamond.png);
+}
+.card-holder > div.oval > div {
+    background-image: url(img/frame-oval.png);
+}
+.card-holder > div.squiggle > div {
+    background-image: url(img/frame-squiggle.png);
+}
+
+.card-holder > div.diamond.hashed > div {
+    background-image: url(img/frame-diamond.png), url(img/hashed.png);
+}
+.card-holder > div.oval.hashed > div {
+    background-image: url(img/frame-oval.png), url(img/hashed.png);
+}
+.card-holder > div.squiggle.hashed > div {
+    background-image: url(img/frame-squiggle.png), url(img/hashed.png);
+}
+
+.card-holder > div.hashed > div,
+.card-holder > div.solid > div {
+    background-color: #00ff00;
+}
+
+.card-holder > div.two > div:nth-child(1),
+.card-holder > div.one > div:nth-child(1),
+.card-holder > div.one > div:nth-child(2) {
+    display: none;
+}
+
+.button-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    background: black;
+    padding: 0 8px;
+    border-bottom: 1px solid #444;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.button-bar .button {
+	background: skyblue;
+	float: left;
+	margin-right: 8px;
+    text-transform: uppercase;
+    padding: 6px 8px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.button-bar .help {
+	position: absolute;
+    right: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+	background: darkblue;
+    padding: 2px 7px;
+    border: 2px solid white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.button-bar .scores {
+	color: white;
+	float: left;
+}
+.button-bar .scores > div {
+	float: left;
+    padding: 0 5px;
+    margin-left: 10px;
+   	font-weight: bold;
+   	cursor: pointer;
+}
+.button-bar .scores > div > span {
+	font-weight: normal;
+}
