@@ -31,7 +31,7 @@ body.correct {
 }
 
 .card-holder {
-	height: calc(100vh - 45px);
+	height: calc(100% - 45px);
     margin: 45px auto 0;
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@ body.correct {
     background: white;
     float: left;
     width: calc( ( 90vw / 5) );
-    height: calc( ( 66vw / 5 ) );
+    height: calc( ( (100% - 45px) / 3 ) );
     display: flex;
     justify-content: center;
     align-items: center;

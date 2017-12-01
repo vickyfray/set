@@ -21,6 +21,7 @@ fills = [
 ];
 
 $(function(){
+    $(window).resize();
     var cardHolder = $('.card-holder');
     newDeck();
 
@@ -85,7 +86,7 @@ $(function(){
                 cards.splice(0, 1);
             }
             if(cards.length == 0){
-                $('.no-matches').remove();
+                $('.no-matches').hide();
             }
             if( $('.card-holder > div').length == 15){
                 cardHolder.addClass('extra');
@@ -133,5 +134,10 @@ $(function(){
 
         cardHolder.empty();
         addCards(12);
+        $('.no-matches').show();
     }
+});
+
+$(window).resize(function(){
+    $('html').height(window.innerHeight);
 });
